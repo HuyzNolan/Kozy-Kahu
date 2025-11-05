@@ -49,10 +49,6 @@ export function SettingsView() {
               <label className="text-sm text-foreground">Chế độ ánh sáng</label>
               <ThemeToggle />
             </div>
-            <div className="flex items-center justify-between">
-              <label className="text-sm text-foreground">Chế độ xem</label>
-              <ViewModeToggle />
-            </div>
           </div>
         </div>
 

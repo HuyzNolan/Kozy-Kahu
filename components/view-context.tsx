@@ -1,43 +1,25 @@
 "use client"
 
-import type React from "react"
-import { createContext, useContext, useState, useEffect } from "react"
-
-type ViewMode = "board" | "list"
+import { createContext, useContext } from "react"
 
 interface ViewContextType {
-  viewMode: ViewMode
-  setViewMode: (mode: ViewMode) => void
+  viewMode: "board"
 }
 
 const ViewContext = createContext<ViewContextType | undefined>(undefined)
 
 export function ViewProvider({ children }: { children: React.ReactNode }) {
-  const [viewMode, setViewMode] = useState<ViewMode>("board")
-  const [mounted, setMounted] = useState(false)
+  const value: ViewContextType = { viewMode: "board" }
 
-  useEffect(() => {
-    setMounted(true)
-    const saved = localStorage.getItem("viewMode") as ViewMode | null
-    if (saved) {
-      setViewMode(saved)
-    }
-  }, [])
-
-  const handleSetViewMode = (mode: ViewMode) => {
-    setViewMode(mode)
-    if (mounted) {
-      localStorage.setItem("viewMode", mode)
-    }
-  }
-
-  return <ViewContext.Provider value={{ viewMode, setViewMode: handleSetViewMode }}>{children}</ViewContext.Provider>
+  return (
+    <ViewContext.Provider value={value}>
+      {children}
+    </ViewContext.Provider>
+  )
 }
 
 export function useView() {
   const context = useContext(ViewContext)
-  if (context === undefined) {
-    throw new Error("useView must be used within a ViewProvider")
-  }
+  if (!context) throw new Error("useView must be used within a ViewProvider")
   return context
 }
