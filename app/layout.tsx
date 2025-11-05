@@ -14,8 +14,8 @@ const _poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Kozy Zuki",
-  description: "A website that helps you focus",
+  title: "Kozy Kahu",
+  description: "A chill website that helps you focus",
   generator: "v0.app",
   icons: {
     icon: "/abc1.png",
@@ -37,7 +37,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#111" />
 
-        <meta property="og:title" content="Kozy Zuki" />
+        <meta property="og:title" content="Kozy Kahu" />
         <meta property="og:description" content="A chill website that helps you focus" />
       </head>
 

@@ -20,7 +20,7 @@ export function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
         <div className="flex items-center gap-4">
           <Image
             src="/mambo.jpg"
-            alt="Kozy Zuki Logo"
+            alt="Kozy Kahu Logo"
             width={80}
             height={80}
             className="rounded-xl shadow-sm flex-shrink-0"
@@ -28,7 +28,7 @@ export function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
           />
           <div className="min-w-0">
             <h1 className="font-bold text-base text-foreground leading-tight">
-              Kozy Zuki
+              Kozy Kahu
             </h1>
             <p className="text-xs text-muted-foreground">
               Trợ lý AI của bạn

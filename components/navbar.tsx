@@ -13,14 +13,14 @@ export function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen }: NavbarProps) {
         <div className="flex items-center gap-2">
           <Image
             src="/mambo.jpg"
-            alt="Kozy Zuki Logo"
+            alt="Kozy Kahu Logo"
             width={100}
             height={100}
             className="rounded-xl shadow-sm"
             priority
           />
           <h1 className="text-xl font-bold text-foreground hidden md:block tracking-tight">
-            Kozy Zuki
+            Kozy Kahu
           </h1>
         </div>
 
