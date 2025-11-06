@@ -19,10 +19,10 @@ export function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
       <div className="p-6 border-b border-sidebar-border">
         <div className="flex items-center gap-4">
           <Image
-            src="/mambo.jpg"
+            src="/K HUY 2.jpg"
             alt="Kozy Kahu Logo"
-            width={80}
-            height={80}
+            width={90}
+            height={90}
             className="rounded-xl shadow-sm flex-shrink-0"
             priority
           />

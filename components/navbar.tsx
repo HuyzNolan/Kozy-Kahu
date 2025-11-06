@@ -12,10 +12,10 @@ export function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen }: NavbarProps) {
       <div className="px-4 md:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image
-            src="/mambo.jpg"
+            src="/K HUY 2.jpg"
             alt="Kozy Kahu Logo"
-            width={100}
-            height={100}
+            width={120}
+            height={120}
             className="rounded-xl shadow-sm"
             priority
           />

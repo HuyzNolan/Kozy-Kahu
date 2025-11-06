@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "A chill website that helps you focus",
   generator: "v0.app",
   icons: {
-    icon: "/abc1.png",
+    icon: "/KozyKahu (2).png",
   },
 }
 
