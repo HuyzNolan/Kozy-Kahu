@@ -79,6 +79,7 @@ export function TaskCard({ task, onToggle, onDelete, onUpdate }: TaskCardProps) 
   if (isEditMode) {
     return (
       <div className="bg-card border-2 border-primary/40 rounded-2xl p-4 md:p-6 shadow-md transition-all">
+        
         <div className="space-y-4">
           <div>
             <label className="text-xs font-semibold text-muted-foreground mb-2 block">Tên nhiệm vụ</label>

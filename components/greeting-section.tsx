@@ -7,6 +7,7 @@ export function GreetingSection() {
   const { name } = useUser()
   const [greeting, setGreeting] = useState("")
   const [timeOfDay, setTimeOfDay] = useState<"morning" | "afternoon" | "evening">("morning")
+  const [message, setMessage] = useState("")
 
   useEffect(() => {
     const hour = new Date().getHours()
@@ -20,6 +21,18 @@ export function GreetingSection() {
       setTimeOfDay("evening")
       setGreeting("Chào buổi tối")
     }
+
+    const messages = [
+      "Hãy làm cho ngày hôm nay trở nên hiệu quả 💪",
+      "Một nhiệm vụ nhỏ cũng là một bước tiến lớn ✨",
+      "Đừng đợi cảm hứng — hãy tạo ra nó 🎨",
+      "Cà phê + tập trung = thành công ☕⚡",
+      "Làm tốt hơn hôm qua một chút thôi cũng đủ 💯",
+      "Từng sự cố gắng đều đáng giá 🧠",
+      "Đặt mục tiêu và bắn trúng nó 🎯",
+      "Hôm nay không làm thì mai cũng phải làm thôi 😎",
+    ]
+    setMessage(messages[Math.floor(Math.random() * messages.length)])
   }, [])
 
   const displayText = name ? `${greeting}, ${name}` : "Hôm nay bạn cảm thấy thế nào ?"
@@ -45,9 +58,7 @@ export function GreetingSection() {
         {displayText}
       </h1>
       <p className="mt-3 text-lg md:text-xl font-medium text-white/90">
-        {name
-          ? "Hãy làm cho ngày hôm nay trở nên hiệu quả 💪"
-          : "Hôm nay bạn muốn đạt được điều gì? 🚀"}
+        {message}
       </p>
     </div>
   )
