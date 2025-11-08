@@ -24,10 +24,16 @@
   color: #f8f8f2;
 }
 
+/* Math styling */
 .katex {
-  font-size: 1.05em;
+  font-size: 1em; /* đồng đều với text bình thường */
   color: #111;
   font-family: "Poppins", "Poppins Fallback", system-ui, -apple-system, sans-serif;
+  vertical-align: middle; /* căn giữa inline math với text */
+}
+
+.katex .katex-display {
+  font-size: 1.05em; /* block math hơi to hơn một chút */
 }
 
 .dark .katex {
