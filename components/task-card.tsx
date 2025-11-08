@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { AIChatModal } from "./ai-chat-modal"
+import  AIChatModal  from "./ai-chat-modal"
 import { DeleteConfirmationDialog } from "./delete-confirmation-dialog"
 
 interface Task {

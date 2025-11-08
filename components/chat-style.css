@@ -1,0 +1,44 @@
+.markdown-body {
+  font-family: "Poppins", "Poppins Fallback", system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.markdown-body strong {
+  font-weight: 700;
+}
+
+.markdown-body em {
+  font-style: italic;
+}
+
+.markdown-body code {
+  background-color: #f5f5f5;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: "Geist Mono", "Geist Mono Fallback", monospace;
+}
+
+.dark .markdown-body code {
+  background-color: #333;
+  color: #f8f8f2;
+}
+
+.katex {
+  font-size: 1.05em;
+  color: #111;
+  font-family: "Poppins", "Poppins Fallback", system-ui, -apple-system, sans-serif;
+}
+
+.dark .katex {
+  color: #f0f0f0;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+.animate-bounce {
+  animation: bounce 1.4s infinite;
+}
