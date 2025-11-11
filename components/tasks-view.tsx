@@ -29,14 +29,12 @@ export function TasksView() {
       const today = new Date().toDateString()
 
       if (lastReset !== today) {
-        const resetTasks = savedTasks.map((t) =>
-          t.completed ? { ...t, completed: false } : t
-        )
+        const resetTasks = savedTasks.filter((t) => !t.completed)
         localStorage.setItem("tasks", JSON.stringify(resetTasks))
         localStorage.setItem("lastResetDate", today)
         setTasks(resetTasks)
         if (savedTasks.some((t) => t.completed)) {
-          console.log("🌞 Chào ngày mới! Nhiệm vụ đã được reset lại để bắt đầu lại từ đầu.")
+          console.log("🌞 Chào ngày mới! Các nhiệm vụ hoàn thành hôm qua đã được ẩn đi.")
         }
       } else {
         setTasks(savedTasks)
@@ -109,7 +107,6 @@ export function TasksView() {
     }
   }
 
-  // ===== PHÂN LOẠI NHIỆM VỤ =====
   const { todayTasks, futureTasks, overdueTasks, completedTasks } = useMemo(() => {
     const now = new Date()
     const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate())
@@ -150,12 +147,12 @@ export function TasksView() {
 
       <div className="mb-8">
         <h2 className="text-3xl font-bold text-foreground mb-2">Các nhiệm vụ</h2>
-        <p className="text-muted-foreground">{tasks.length} nhiệm vụ tổng cộng</p>
+        <p className="text-muted-foreground">Tổng cộng: {tasks.length} nhiệm vụ</p>
       </div>
 
       {overdueTasks.length > 0 && (
         <div className="mb-10">
-          <h3 className="text-xl font-semibold mb-3 text-red-500">⚠️ Nhiệm vụ quá hạn</h3>
+          <h3 className="text-xl font-semibold mb-3 text-red-500">⚠️ Nhiệm vụ trễ hạn</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {overdueTasks.map((task) => (
               <TaskCard key={task.id} task={task} onToggle={handleToggleTask} onDelete={handleDeleteTask} onUpdate={handleUpdateTask} />

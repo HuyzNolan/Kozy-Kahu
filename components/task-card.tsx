@@ -38,7 +38,7 @@ const getDaysRemaining = (dueDate: string) => {
   const due = new Date(dueDate)
   const diff = Math.ceil((due.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
 
-  if (diff < 0) return "Quá hạn"
+  if (diff < 0) return "Trễ hạn"
   if (diff === 0) return "Hạn thực hiện: Hôm nay"
   if (diff === 1) return "Hạn thực hiện: Ngày mai"
   return `Hạn thực hiện: ${diff} ngày`

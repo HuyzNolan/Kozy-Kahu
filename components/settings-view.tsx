@@ -51,23 +51,6 @@ export function SettingsView() {
             </div>
           </div>
         </div>
-
-        <div className="bg-card border border-border rounded-lg p-6">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-xl">🔔</span>
-            <h3 className="font-semibold text-foreground">Thông báo</h3>
-          </div>
-          <div className="space-y-4">
-            <label className="flex items-center gap-3 cursor-pointer">
-              <input type="checkbox" defaultChecked className="w-4 h-4" />
-              <span className="text-sm text-foreground">Thông báo nhiệm vụ</span>
-            </label>
-            <label className="flex items-center gap-3 cursor-pointer">
-              <input type="checkbox" defaultChecked className="w-4 h-4" />
-              <span className="text-sm text-foreground">Thông báo hàng ngày</span>
-            </label>
-          </div>
-        </div>
       </div>
     </div>
   )
